@@ -26,6 +26,27 @@ class UsersController < ApplicationController
         
     end
 
+    def update
+        user = User.find_by(id: current_user.id)
+
+        if user.update(user_params)
+            render json: user
+        else
+            render json: {error: user.errors.full_messages}
+        end
+    end
+
+    def delete
+        user = User.find_by(id: current_user.id)
+
+        if user.destroy
+            render json: {message: "Delete Successful"}
+        else
+            render json: {error: "Delete Unsuccessful"}
+        end
+        
+    end
+
 private
 
     def user_params
