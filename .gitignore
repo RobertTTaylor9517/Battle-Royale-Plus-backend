@@ -17,6 +17,10 @@
 /storage/*
 !/storage/.keep
 .byebug_history
+.env
+.env.example
+.env.local
+.env.staging
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
