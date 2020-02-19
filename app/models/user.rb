@@ -3,9 +3,9 @@ class User < ApplicationRecord
     has_many :teams
 
     validates :username, uniqueness: {case_sensitive: false}
-    validates :username, prescence: true
+    validates :username, presence: true
     validates :email, uniqueness: true
-    validates :email, prescence: true
-    validates :password, prescence: true, if: :password
+    validates :email, presence: true
+    validates :password, presence: true, if: :password
 
 end
