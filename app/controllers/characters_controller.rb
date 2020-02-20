@@ -18,7 +18,6 @@ class CharactersController < ApplicationController
 
     def delete
         character = Character.find_by(id: params[:id])
-        character.character_attacks.destroy_all
 
         if character.destroy 
             render json: {message: "Character Deleted"}

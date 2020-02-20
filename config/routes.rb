@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   delete '/team/:id', to: 'teams#delete'
   post '/characters/new', to: 'characters#create'
   delete '/character/:id', to: 'characters#delete'
+  get '/start/:id', to: 'single_player#start'
 end

@@ -15,7 +15,9 @@ class TeamsController < ApplicationController
         team = Team.find_by(id: params[:id])
 
         if team
-            render json: team
+            render json: team.to_json(include: [characters: {
+                include: [:attacks]
+            }])
         else
             render json: {error: 'Team Not Found'}
         end
@@ -23,11 +25,6 @@ class TeamsController < ApplicationController
 
     def delete
         team = Team.find_by(id: params[:id])
-        team.characters.each do |char|
-            char.character_attacks.destroy_all
-        end
-        
-        team.characters.destroy_all
 
         if team.destroy
             render json: {message: "Team Deleted"}

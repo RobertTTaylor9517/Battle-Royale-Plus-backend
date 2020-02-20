@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Attack.destroy_all
+# Attack.destroy_all
 Dungeon.destroy_all
 Floor.destroy_all
 FloorEnemy.destroy_all
@@ -32,37 +32,57 @@ flameMaxim = Attack.find_or_create_by(name: "Maximum Flame", element: "boss", da
 stab = Attack.find_or_create_by(name: "Stab", element: "enem", damage: 30)
 balast = Attack.find_or_create_by(name: "Balast", element: "enem", damage: 30)
 
-goblin = Enemy.create!(name: "Goblin", health: 80, weakness: "fire")
+goblin = Enemy.find_or_create_by!(name: "Goblin", health: 80, weakness: "fire", difficulty: 'easy')
 EnemyAttack.find_or_create_by!(enemy_id: goblin.id, attack_id: rush.id)
 EnemyAttack.find_or_create_by!(enemy_id: goblin.id, attack_id: strike.id)
 
-mermen = Enemy.create!(name: "Merman", health: 100, weakness: "ice")
+mermen = Enemy.find_or_create_by!(name: "Merman", health: 100, weakness: "ice", difficulty: 'easy')
 EnemyAttack.find_or_create_by!(enemy_id: mermen.id, attack_id: wave.id)
 EnemyAttack.find_or_create_by!(enemy_id: mermen.id, attack_id: water_wheel.id)
 
-highGoblin = Enemy.create!(name: "Goblin Mage", health: 100, weakness: "earth")
+highGoblin = Enemy.find_or_create_by!(name: "Goblin Mage", health: 100, weakness: "earth", difficulty: 'normal')
 EnemyAttack.find_or_create_by!(enemy_id: highGoblin.id, attack_id: fire_flame.id)
 EnemyAttack.find_or_create_by!(enemy_id: highGoblin.id, attack_id: flame_punch.id)
 EnemyAttack.find_or_create_by!(enemy_id: highGoblin.id, attack_id: ice_pillar.id)
 
-goblinKnight = Enemy.create!(name: "Goblin Knight", health: 90, weakness: 'fire')
-EnemyAttack.find_or_create_by!(enemy_id: goblinKnight.id, attack_id: rush.id)
+goblinKnight = Enemy.find_or_create_by!(name: "Goblin Knight", health: 90, weakness: 'fire', difficulty: 'normal')
+EnemyAttack.create!(enemy_id: goblinKnight.id, attack_id: rush.id)
+EnemyAttack.create!(enemy_id: goblinKnight.id, attack_id: rush.id)
 EnemyAttack.find_or_create_by!(enemy_id: goblinKnight.id, attack_id: rock.id)
 
-golem = Enemy.create!(name: "Golem", health: 500, weakness: 'none')
-EnemyAttack.find_or_create_by!(enemy_id: golem.id, attack_id: quake.id)
+golem = Enemy.find_or_create_by!(name: "Golem", health: 500, weakness: 'none', difficulty: 'mini_boss')
+EnemyAttack.create!(enemy_id: golem.id, attack_id: quake.id)
+EnemyAttack.create!(enemy_id: golem.id, attack_id: quake.id)
 EnemyAttack.find_or_create_by!(enemy_id: golem.id, attack_id: rush.id)
+
+darkKnight = Enemy.find_or_create_by!(name: "Dark Knight", health: 200, weakness: 'water', difficulty: 'hard')
+EnemyAttack.find_or_create_by!(enemy_id: darkKnight.id, attack_id: flame_pillar.id)
+EnemyAttack.find_or_create_by!(enemy_id: darkKnight.id, attack_id: rush.id)
+
+darkMage = Enemy.find_or_create_by!(name: "Dark Mage", health: 150, weakness: 'water', difficulty: 'hard')
+EnemyAttack.find_or_create_by!(enemy_id: darkMage.id, attack_id: quake.id)
+EnemyAttack.find_or_create_by!(enemy_id: darkMage.id, attack_id: rock.id)
+EnemyAttack.find_or_create_by!(enemy_id: darkMage.id, attack_id: balast.id)
+
+highKnight = Enemy.find_or_create_by!(name: 'High Knight', health: 200, weakness: 'earth', difficulty: 'hard')
+EnemyAttack.create!(enemy_id: highKnight.id, attack_id: stab.id)
+EnemyAttack.create!(enemy_id: highKnight.id, attack_id: balast.id)
+
+bahamut = Enemy.find_or_create_by!(name: 'Bahamut', health: 800, weakness: 'none', difficulty: 'boss')
+EnemyAttack.create!(enemy_id: bahamut.id, attack_id: stab.id)
+EnemyAttack.create!(enemy_id: bahamut.id, attack_id: flameMaxim.id)
+EnemyAttack.create!(enemy_id: bahamut.id, attack_id: flame_pillar.id)
 
 dungeon1 = Dungeon.find_or_create_by(name: "First Dungeon")
 
 floorA1 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'easy')
 floorA2 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'easy')
-floorA3 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'easy')
-floorA4 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'easy')
-floorA5 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
+floorA3 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
+floorA4 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
+floorA5 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'mini_boss')
 floorA6 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA7 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA8 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA9 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA10 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
+floorA7 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
+floorA8 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
+floorA9 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
+floorA10 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'boss')
 
