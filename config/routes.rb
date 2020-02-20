@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get '/user', to: 'users#show'
   patch '/user', to: 'users#update'
   delete '/user', to: 'users#delete'
+  post 'teams/new', to: 'teams#create'
+  get '/team/:id', to: 'teams#show'
+  delete '/team/:id', to: 'teams#delete'
 end

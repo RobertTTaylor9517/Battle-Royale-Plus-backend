@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_19_205426) do
+ActiveRecord::Schema.define(version: 2020_02_20_143415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,41 @@ ActiveRecord::Schema.define(version: 2020_02_19_205426) do
     t.string "name"
     t.integer "health"
     t.string "focus"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "dungeons", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "enemies", force: :cascade do |t|
+    t.string "name"
+    t.integer "health"
+    t.string "weakness"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "enemy_attacks", force: :cascade do |t|
+    t.integer "enemy_id"
+    t.integer "attack_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "floor_enemies", force: :cascade do |t|
+    t.integer "floor_id"
+    t.integer "enemy_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "floors", force: :cascade do |t|
+    t.integer "dungeon_id"
+    t.string "difficulty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
