@@ -12,7 +12,7 @@ class SinglePlayerController < ApplicationController
 
         @dungeon = Dungeon.find_by(id: params[:id])
 
-        @dungeon.floors[0..4].each do |floor|
+        @dungeon.floors.each do |floor|
             floor.floor_enemies.destroy_all
             case floor.difficulty
             when 'easy'
@@ -33,6 +33,10 @@ class SinglePlayerController < ApplicationController
                 end
                 rand(2..3).times do
                     FloorEnemy.create(floor_id: floor.id, enemy_id: @normalEnem.sample.id)
+                end
+            when 'harder'
+                rand(3..4).times do
+                    FloorEnemy.create(floor_id: floor.id, enemy_id: @hardEnem.sample.id)
                 end
             when 'mini_boss'
                 FloorEnemy.create(floor_id: floor.id, enemy_id: @miniBossEnem.sample.id)

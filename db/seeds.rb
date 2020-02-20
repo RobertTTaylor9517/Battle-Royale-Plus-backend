@@ -83,6 +83,6 @@ floorA5 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'mini_boss')
 floorA6 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
 floorA7 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
 floorA8 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
-floorA9 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
+floorA9 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'harder')
 floorA10 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'boss')
 
