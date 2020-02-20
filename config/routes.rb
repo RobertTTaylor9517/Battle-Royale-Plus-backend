@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   post 'teams/new', to: 'teams#create'
   get '/team/:id', to: 'teams#show'
   delete '/team/:id', to: 'teams#delete'
+  post '/characters/new', to: 'characters#create'
+  delete '/character/:id', to: 'characters#delete'
 end

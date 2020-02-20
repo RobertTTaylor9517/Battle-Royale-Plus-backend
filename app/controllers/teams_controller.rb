@@ -23,6 +23,11 @@ class TeamsController < ApplicationController
 
     def delete
         team = Team.find_by(id: params[:id])
+        team.characters.each do |char|
+            char.character_attacks.destroy_all
+        end
+        
+        team.characters.destroy_all
 
         if team.destroy
             render json: {message: "Team Deleted"}
