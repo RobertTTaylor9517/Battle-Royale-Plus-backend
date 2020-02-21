@@ -17,7 +17,7 @@ class FloorsController < ApplicationController
 
             render json: floor.to_json(include: [enemies: {
                 include: [:attacks]
-            }])
+            }, floor_enemies: {}])
         else
             render json: {error: 'Error Creating Floor'}
         end

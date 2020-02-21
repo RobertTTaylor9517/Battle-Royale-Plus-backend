@@ -7,6 +7,7 @@ class TeamsController < ApplicationController
         if team.save!
             render json: team
         else
+            # add specific arror messages
             render json: {error: "Did Not Save Team"}
         end
     end
@@ -36,6 +37,7 @@ class TeamsController < ApplicationController
 private
 
     def team_params
+        # add id
         params.require(:team).permit(:team_name)
     end
 end

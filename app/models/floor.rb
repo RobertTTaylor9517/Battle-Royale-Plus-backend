@@ -6,10 +6,13 @@ class Floor < ApplicationRecord
     def gen_floor(easy, normal, hard, mini_boss, boss)
         case self.difficulty
         when 'easy'
+            easy = Enemy.where(difficulty: 'easy')
             rand(1..2).times do
                 FloorEnemy.create(floor_id: self.id, enemy_id: easy.sample.id)
             end
         when 'normal'
+            easy = Enemy.where(difficulty: 'easy')
+            normal = Enemy.where(difficulty: 'normal')
             rand(1..2).times do
                 FloorEnemy.create(floor_id: self.id, enemy_id: normal.sample.id)
             end
@@ -17,6 +20,9 @@ class Floor < ApplicationRecord
                 FloorEnemy.create(floor_id: self.id, enemy_id: easy.sample.id)
             end
         when 'hard'
+            normal = Enemy.where(difficulty: 'normal')
+            hard = Enemy.where(difficulty: 'hard')
+
             rand(1..2).times do
                 FloorEnemy.create(floor_id: self.id, enemy_id: hard.sample.id)
             end
@@ -24,6 +30,7 @@ class Floor < ApplicationRecord
                 FloorEnemy.create(floor_id: self.id, enemy_id: normal.sample.id)
             end
         when 'harder'
+            hard = Enemy.where(difficulty: 'hard')
             rand(3..4).times do
                 FloorEnemy.create(floor_id: self.id, enemy_id: hard.sample.id)
             end

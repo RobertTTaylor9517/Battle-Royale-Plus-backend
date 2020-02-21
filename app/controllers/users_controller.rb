@@ -11,6 +11,7 @@ class UsersController < ApplicationController
             puts(token)
             render json: {token: token}
         else
+            # add specific messages for validation errors
             render json: {error: 'Did Not Save'}
         end
     end
@@ -44,7 +45,7 @@ class UsersController < ApplicationController
         else
             render json: {error: "Delete Unsuccessful"}
         end
-        
+
     end
 
 private

@@ -5,6 +5,8 @@ class SinglePlayerController < ApplicationController
     def attack
         enemy = params[:enemy]
         attack = params[:attack]
+        floor_enemy_id = params[:floor_enemy_id]
+
 
         puts("Received: #{enemy}")
 
@@ -17,6 +19,8 @@ class SinglePlayerController < ApplicationController
         if enemy['health'] > 0
             render json: enemy
         else
+            floor_enemy = FloorEnemy.find_by(id: floor_enemy_id)
+            floor_enemy.destroy
             render json: {death: 'Enemy Died'}
         end
 
@@ -48,6 +52,7 @@ class SinglePlayerController < ApplicationController
 
         end
 
+        team = Team.find_by(id: params[:team_id])
         render json: team.to_json(include: [:characters])
         
     end
