@@ -75,14 +75,3 @@ EnemyAttack.create!(enemy_id: bahamut.id, attack_id: flame_pillar.id)
 
 dungeon1 = Dungeon.find_or_create_by(name: "First Dungeon")
 
-floorA1 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'easy')
-floorA2 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'easy')
-floorA3 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA4 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA5 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'mini_boss')
-floorA6 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'normal')
-floorA7 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
-floorA8 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'hard')
-floorA9 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'harder')
-floorA10 = Floor.create!(dungeon_id: dungeon1.id, difficulty: 'boss')
-

@@ -2,56 +2,54 @@ class SinglePlayerController < ApplicationController
     before_action :authenticate_request
 
 
+    def attack
+        enemy = params[:enemy]
+        attack = params[:attack]
 
-    def start
-        @easyEnem = Enemy.where(difficulty: 'easy')
-        @normalEnem = Enemy.where(difficulty: 'normal')
-        @hardEnem = Enemy.where(difficulty: 'hard')
-        @miniBossEnem = Enemy.where(difficulty: 'mini_boss')
-        @bossEnem = Enemy.where(difficulty: 'boss')
+        puts("Received: #{enemy}")
 
-        @dungeon = Dungeon.find_by(id: params[:id])
-
-        @dungeon.floors.each do |floor|
-            floor.floor_enemies.destroy_all
-            case floor.difficulty
-            when 'easy'
-                puts(@easyEnem)
-                rand(1..2).times do
-                    FloorEnemy.create(floor_id: floor.id, enemy_id: @easyEnem.sample.id)
-                end
-            when 'normal'
-                rand(1..2).times do
-                    FloorEnemy.create(floor_id: floor.id, enemy_id: @normalEnem.sample.id)
-                end
-                rand(2..3).times do
-                    FloorEnemy.create(floor_id: floor.id, enemy_id: @easyEnem.sample.id)
-                end
-            when 'hard'
-                rand(1..2).times do
-                    FloorEnemy.create(floor_id: floor.id, enemy_id: @hardEnem.sample.id)
-                end
-                rand(2..3).times do
-                    FloorEnemy.create(floor_id: floor.id, enemy_id: @normalEnem.sample.id)
-                end
-            when 'harder'
-                rand(3..4).times do
-                    FloorEnemy.create(floor_id: floor.id, enemy_id: @hardEnem.sample.id)
-                end
-            when 'mini_boss'
-                FloorEnemy.create(floor_id: floor.id, enemy_id: @miniBossEnem.sample.id)
-            when 'boss'
-                FloorEnemy.create(floor_id: floor.id, enemy_id: @bossEnem.sample.id)
-            end
+        if enemy["weakness"] === attack["element"]
+            enemy['health'] = enemy['health'] - (attack['damage'] * 2)
+        else
+            enemy['health'] = enemy['health'] - (attack['damage'])
         end
 
-        render json: @dungeon.to_json(include: [floors: {
+        if enemy['health'] > 0
+            render json: enemy
+        else
+            render json: {death: 'Enemy Died'}
+        end
 
-            include: [enemies: {
-                include: [:attacks]
-            }]
-        
-        }])
 
     end
+
+    def hit
+        floor_id = params[:floor_id]
+        team = Team.find_by(id: params[:team_id])
+        
+
+        floor = Floor.find_by(id: floor_id)
+
+        floor.enemies.each do |enem|
+            attack = enem.attacks.sample
+            target_id = team.characters.sample.id
+            target = Character.find_by(id: target_id)
+
+            if target.focus === attack.element
+                new_health = target.health - (attack.damage/2)
+                puts("Return: #{new_health}")
+                target.update(health: new_health)
+            else
+                new_health = target.health - (attack.damage)
+                puts("Return: #{new_health}")
+                target.update(health: new_health)
+            end
+
+
+        end
+
+        render json: team.to_json(include: [:characters])
+        
+    end
+
 end
