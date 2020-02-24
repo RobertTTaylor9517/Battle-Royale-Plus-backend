@@ -3,13 +3,16 @@ class UsersController < ApplicationController
 
     def create
         # puts(params)
-        byebug
+        # byebug
         user = User.new(user_params)
 
         if user.save!
+            attacks = Attack.all 
             token = JsonWebToken.encode(user_id: user.id)
             puts(token)
-            render json: {token: token}
+            render json: {token: token,
+                        user: current_user,
+                        attacks: attacks}
         else
             # add specific messages for validation errors
             render json: {error: 'Did Not Save'}

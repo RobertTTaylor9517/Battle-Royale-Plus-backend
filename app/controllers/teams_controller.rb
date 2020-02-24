@@ -5,7 +5,7 @@ class TeamsController < ApplicationController
         team = Team.new(team_params.merge(user_id: current_user.id))
 
         if team.save!
-            render json: team
+            render json: team.to_json(include: [:characters])
         else
             # add specific arror messages
             render json: {error: "Did Not Save Team"}

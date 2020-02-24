@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   post '/floor', to: 'floors#create'
   post '/attack', to: 'single_player#attack'
   post '/hit', to: 'single_player#hit'
+  get '/attacks', to: 'attacks#index'
 end

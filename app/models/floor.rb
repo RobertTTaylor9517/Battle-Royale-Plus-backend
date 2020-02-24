@@ -3,7 +3,7 @@ class Floor < ApplicationRecord
     has_many :floor_enemies
     has_many :enemies, through: :floor_enemies
 
-    def gen_floor(easy, normal, hard, mini_boss, boss)
+    def gen_floor()
         case self.difficulty
         when 'easy'
             easy = Enemy.where(difficulty: 'easy')
