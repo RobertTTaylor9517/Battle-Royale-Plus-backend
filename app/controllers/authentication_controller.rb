@@ -9,7 +9,7 @@ class AuthenticationController < ApplicationController
             user = User.find_by(id: temp['user_id'])
             attacks = Attack.all 
 
-            render json: {token: command.result, user: user, attacks: attacks}
+            render json: {token: command.result, user: user, teams: user.teams, attacks: attacks}
         else
             render json: {error: 'Invalid Login'}
         end

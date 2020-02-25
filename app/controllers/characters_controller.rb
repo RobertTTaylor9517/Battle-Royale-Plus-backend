@@ -5,6 +5,7 @@ class CharactersController < ApplicationController
         character = Character.new(name: params[:name], focus: params[:focus], health: 100, team_id: params[:team_id])
 
         if character.save!
+            puts(params[:attacks])
             attacks = params[:attacks].split(',')
             attacks.each do |att|
                 CharacterAttack.create(character_id: character.id, attack_id: att)

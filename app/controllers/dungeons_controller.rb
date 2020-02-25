@@ -2,10 +2,10 @@ class DungeonsController < ApplicationController
     before_action :authenticate_request
 
     def index
-        dungeons = Dungeon.all 
+        dungeon = Dungeon.all.first 
 
-        if dungeons.length > 0
-            render json: dungeons 
+        if dungeon
+            render json: dungeon 
         else
             render json: {error: 'No Dungeons'}
         end

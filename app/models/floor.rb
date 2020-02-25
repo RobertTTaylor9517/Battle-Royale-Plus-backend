@@ -35,8 +35,10 @@ class Floor < ApplicationRecord
                 FloorEnemy.create(floor_id: self.id, enemy_id: hard.sample.id)
             end
         when 'mini_boss'
+            mini_boss =  Enemy.where(difficulty: 'mini_boss')
             FloorEnemy.create(floor_id: self.id, enemy_id: mini_boss.sample.id)
         when 'boss'
+            boss = Enemy.where(difficulty: 'boss')
             FloorEnemy.create(floor_id: self.id, enemy_id: boss.sample.id)
         end
     end

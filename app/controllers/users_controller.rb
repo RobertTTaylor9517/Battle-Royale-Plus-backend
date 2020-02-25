@@ -10,9 +10,9 @@ class UsersController < ApplicationController
             attacks = Attack.all 
             token = JsonWebToken.encode(user_id: user.id)
             puts(token)
-            render json: {token: token,
-                        user: current_user,
-                        attacks: attacks}
+            attacks = Attack.all 
+
+            render json: {token: token, user: user, teams: [], attacks: attacks}
         else
             # add specific messages for validation errors
             render json: {error: 'Did Not Save'}
