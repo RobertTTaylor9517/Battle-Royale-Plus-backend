@@ -53,7 +53,9 @@ class SinglePlayerController < ApplicationController
         end
 
         team = Team.find_by(id: params[:team_id])
-        render json: team.to_json(include: [:characters])
+        render json: team.to_json(include: [characters: {
+                include: [:attacks]
+            }])
         
     end
 
