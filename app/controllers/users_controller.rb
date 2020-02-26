@@ -12,7 +12,13 @@ class UsersController < ApplicationController
             puts(token)
             attacks = Attack.all 
 
-            render json: {token: token, user: user, teams: [], attacks: attacks}
+            teams = []
+
+            if user.teams
+                teams = user.teams
+            end
+
+            render json: {token: token, user: user, teams: teams, attacks: attacks}
         else
             # add specific messages for validation errors
             render json: {error: 'Did Not Save'}

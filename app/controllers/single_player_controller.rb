@@ -20,7 +20,9 @@ class SinglePlayerController < ApplicationController
             render json: enemy
         else
             floor_enemy = FloorEnemy.find_by(id: floor_enemy_id)
-            floor_enemy.destroy
+            if(floor_enemy != nil)
+                floor_enemy.destroy
+            end
             render json: {death: 'Enemy Died'}
         end
 
