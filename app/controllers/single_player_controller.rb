@@ -29,29 +29,44 @@ class SinglePlayerController < ApplicationController
 
     end
 
+    def health
+        target = Character.find_by(id: params[:character_id])
+        new_health = target.health + 25
+
+        target.update(health: new_health)
+
+        team = Team.find_by(id: params[:team_id])
+        render json: team.to_json(include: [characters: {
+                include: [:attacks]
+            }])
+            
+    end
+
     def hit
-        floor_id = params[:floor_id]
+        enemy_id = params[:enemy_id]
         team = Team.find_by(id: params[:team_id])
         
+        enemy = Enemy.find_by(id: enemy_id)
 
-        floor = Floor.find_by(id: floor_id)
+        attack = enemy.attacks.sample
+        target_id = team.characters.sample.id
+        target = Character.find_by(id: target_id)
 
-        floor.enemies.each do |enem|
-            attack = enem.attacks.sample
-            target_id = team.characters.sample.id
-            target = Character.find_by(id: target_id)
-
-            if target.focus === attack.element
-                new_health = target.health - (attack.damage/2)
-                puts("Return: #{new_health}")
-                target.update(health: new_health)
+        if(target.focus === attack.element)
+            new_health = target.health - (attack.damage/2)
+            if(new_health <= 0)
+                target.destroy
             else
-                new_health = target.health - (attack.damage)
-                puts("Return: #{new_health}")
                 target.update(health: new_health)
             end
 
-
+        else
+            new_health = target.health - attack.damage
+            if(new_health <= 0)
+                target.destroy
+            else
+                target.update(health: new_health)
+            end
         end
 
         team = Team.find_by(id: params[:team_id])
