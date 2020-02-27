@@ -37,10 +37,7 @@ class SinglePlayerController < ApplicationController
             target.update(health: new_health)
         end
 
-        team = Team.find_by(id: params[:team_id])
-        render json: team.to_json(include: [characters: {
-                include: [:attacks]
-            }])
+        render json: target.to_json(include: [:attacks])
 
     end
 
@@ -72,7 +69,6 @@ class SinglePlayerController < ApplicationController
         end
 
         team = Team.find_by(id: params[:team_id])
-        team.characters.sort_by{|char| char.id}
         render json: team.to_json(include: [characters: {
                 include: [:attacks]
             }])
