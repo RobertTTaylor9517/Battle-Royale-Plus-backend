@@ -23,7 +23,7 @@ class SinglePlayerController < ApplicationController
             if(floor_enemy != nil)
                 floor_enemy.destroy
             end
-            render json: {death: 'Enemy Died'}
+            render json: {death: 'Enemy Died', name: enemy['name']}
         end
 
 
@@ -42,6 +42,7 @@ class SinglePlayerController < ApplicationController
     end
 
     def hit
+        mess = []
         enemy_id = params[:enemy_id]
         team = Team.find_by(id: params[:team_id])
         
@@ -51,9 +52,14 @@ class SinglePlayerController < ApplicationController
         target_id = team.characters.sample.id
         target = Character.find_by(id: target_id)
 
+        params[:mess] = [enemy.name, target.name]
+
+        mess.push("#{enemy.name} attacks #{target.name}")
+
         if(target.focus === attack.element)
             new_health = target.health - (attack.damage/2)
             if(new_health <= 0)
+                mess.push("#{target.name}")
                 target.destroy
             else
                 target.update(health: new_health)
@@ -69,10 +75,14 @@ class SinglePlayerController < ApplicationController
         end
 
         team = Team.find_by(id: params[:team_id])
-        render json: team.to_json(include: [characters: {
+
+        # byebug
+
+        render json: {team: team.to_json(include: [characters: {
                 include: [:attacks]
-            }])
+            }]), message: mess}
         
     end
+
 
 end
