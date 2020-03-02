@@ -1,0 +1,185 @@
+# Logfile created on 2020-03-02 09:08:36 -0500 by logger.rb/66358
+D, [2020-03-02T09:08:36.146489 #10940] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2020-03-02T09:08:36.147944 #10940] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.2.3
+D, [2020-03-02T09:08:36.148490 #10940] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:08:36.148678 #10940] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:08:36.148765 #10940] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:08:36.148837 #10940] DEBUG -- Pubnub::Subscriber: Adding subscription to Subscriber
+D, [2020-03-02T09:08:36.148891 #10940] DEBUG -- Pubnub::Subscriber: Added subscription to Subscriber
+D, [2020-03-02T09:08:36.149087 #10940] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:08:36.149186 #10940] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:08:36.149254 #10940] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:08:36.149322 #10940] DEBUG -- Pubnub::Subscriber: Starting subscription
+D, [2020-03-02T09:08:36.149649 #10940] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:08:36.149759 #10940] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:08:36.149848 #10940] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:08:36.150060 #10940] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:08:36.150000 #10940] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:08:36.150210 #10940] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:08:36.150287 #10940] DEBUG -- Pubnub::Subscriber: Adding subscription to Subscriber
+D, [2020-03-02T09:08:36.150151 #10940] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:08:36.150948 #10940] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=1e019228-3dc5-426f-81b0-10dfa8f269b4
+D, [2020-03-02T09:08:36.150381 #10940] DEBUG -- Pubnub::Subscriber: Added subscription to Subscriber
+D, [2020-03-02T09:08:36.151682 #10940] DEBUG -- Pubnub::Subscriber: Removing current subscription
+D, [2020-03-02T09:08:36.152008 #10940] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:08:36.152150 #10940] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:08:36.152220 #10940] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:08:36.152287 #10940] DEBUG -- Pubnub::Subscriber: Starting subscription
+D, [2020-03-02T09:08:36.152718 #10940] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:08:36.153510 #10940] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:08:36.154300 #10940] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:08:36.155016 #10940] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:08:36.155431 #10940] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=1e019228-3dc5-426f-81b0-10dfa8f269b4
+D, [2020-03-02T09:08:36.396970 #10940] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:08:36.397375 #10940] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=1e019228-3dc5-426f-81b0-10dfa8f269b4
+D, [2020-03-02T09:08:36.397529 #10940] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:08:36.397644 #10940] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:08:36.406137 #10940] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:08:36.406314 #10940] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:08:36.406830 #10940] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:08:36.406927 #10940] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:08:36.407004 #10940] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:08:36.407058 #10940] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:08:36.407577 #10940] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581162885107%22%7D&uuid=1e019228-3dc5-426f-81b0-10dfa8f269b4
+D, [2020-03-02T09:09:45.397649 #10990] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2020-03-02T09:09:45.399138 #10990] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.2.3
+D, [2020-03-02T09:09:45.399729 #10990] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:09:45.399996 #10990] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:09:45.400229 #10990] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:09:45.400430 #10990] DEBUG -- Pubnub::Subscriber: Adding subscription to Subscriber
+D, [2020-03-02T09:09:45.400510 #10990] DEBUG -- Pubnub::Subscriber: Added subscription to Subscriber
+D, [2020-03-02T09:09:45.400790 #10990] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:09:45.400949 #10990] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:09:45.401051 #10990] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:09:45.401155 #10990] DEBUG -- Pubnub::Subscriber: Starting subscription
+D, [2020-03-02T09:09:45.401574 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:09:45.401703 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:09:45.402154 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:09:45.402594 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:09:45.403189 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:09:45.604126 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:09:45.604612 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:09:45.604776 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:09:45.604910 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:09:45.610208 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:09:45.610516 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:09:45.611220 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:09:45.611320 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:09:45.611373 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:09:45.611434 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:09:45.611821 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:11:44.577800 #10990] DEBUG -- Pubnub::Telementry: Initialized Telemetry
+D, [2020-03-02T09:11:44.577909 #10990] DEBUG -- Pubnub::Client: Created new Pubnub::Client instance. Version: 4.2.3
+D, [2020-03-02T09:11:44.578153 #10990] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:11:44.578253 #10990] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:11:44.578295 #10990] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:11:44.578340 #10990] DEBUG -- Pubnub::Subscriber: Adding subscription to Subscriber
+D, [2020-03-02T09:11:44.578402 #10990] DEBUG -- Pubnub::Subscriber: Added subscription to Subscriber
+D, [2020-03-02T09:11:44.578563 #10990] DEBUG -- Pubnub::Telemetry: Fetching telemetry for 
+D, [2020-03-02T09:11:44.578644 #10990] DEBUG -- Pubnub::Event: Initialized Pubnub::Subscribe
+D, [2020-03-02T09:11:44.578676 #10990] DEBUG -- Pubnub::Client: Apply state
+D, [2020-03-02T09:11:44.578715 #10990] DEBUG -- Pubnub::Subscriber: Starting subscription
+D, [2020-03-02T09:11:44.578941 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:11:44.579053 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:11:44.579098 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:11:44.579136 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:11:44.579652 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:11:44.844985 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:11:44.845380 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A0%2C%22t%22%3A0%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:11:44.845510 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:11:44.845578 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:11:44.846619 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:11:44.846698 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:11:44.850586 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:11:44.850706 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:11:44.850756 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:11:44.850800 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:11:44.851180 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:13:16.415016 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:13:16.416638 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:13:16.416808 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:13:16.416898 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:13:16.417798 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:13:16.417853 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:13:16.418014 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:13:16.418047 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:13:16.418070 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:13:16.419711 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:13:16.420208 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:13:16.425919 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:13:16.426972 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:13:16.427674 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:13:16.428377 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:13:16.429878 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:13:16.429948 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:13:16.430119 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:13:16.430158 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:13:16.430179 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:13:16.430204 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:13:16.430635 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:17:56.843400 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:17:56.845921 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:17:56.846147 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:17:56.843588 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:17:56.846700 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:17:56.846331 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:17:56.850604 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:17:56.850753 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:17:56.846922 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:17:56.851354 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:17:56.853987 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:17:56.854199 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:17:56.851239 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:17:56.854582 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:17:56.854675 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:17:56.854770 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:17:56.856359 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:17:56.854523 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:17:56.856857 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:17:56.856958 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:17:56.857027 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:17:56.858399 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:22:37.049279 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:22:37.049887 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:22:37.050125 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:22:37.050198 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:22:37.053125 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:22:37.053403 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:22:37.053764 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:22:37.055181 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:22:37.055369 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:22:37.055462 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:22:37.057563 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:22:37.057659 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:22:37.053853 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:22:37.057957 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:22:37.058028 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:22:37.058134 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:22:37.059938 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:22:37.057896 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:22:37.060598 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:22:37.060749 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:22:37.060850 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:22:37.061328 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:27:17.311290 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:27:17.313747 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:27:17.314029 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:27:17.314166 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:27:17.316823 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:27:17.316939 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:27:17.312763 #10990] DEBUG -- Pubnub: Fire before fire_callback
+D, [2020-03-02T09:27:17.318779 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe
+D, [2020-03-02T09:27:17.319071 #10990] DEBUG -- Pubnub::Event: Event#handle
+D, [2020-03-02T09:27:17.319276 #10990] DEBUG -- Pubnub::SubscribeEvent::Formatter: Formatting non-error envelopes
+D, [2020-03-02T09:27:17.321655 #10990] DEBUG -- Pubnub: Firing callbacks for Pubnub::Subscribe
+D, [2020-03-02T09:27:17.321774 #10990] DEBUG -- Pubnub::Subscriber: Firing callback from listeners
+D, [2020-03-02T09:27:17.317257 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:27:17.322037 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:27:17.322077 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:27:17.322131 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:27:17.323733 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831583047214315%22%7D&uuid=cccf5010-d0d6-4188-b199-c3a91a8fdac5
+D, [2020-03-02T09:27:17.322001 #10990] DEBUG -- Pubnub: Fired event Pubnub::Subscribe
+D, [2020-03-02T09:27:17.324201 #10990] DEBUG -- Pubnub: #send_request start
+D, [2020-03-02T09:27:17.324273 #10990] DEBUG -- Pubnub: #request_dispatcher
+D, [2020-03-02T09:27:17.324301 #10990] DEBUG -- Pubnub::Client: Looking for requester for async subscribe_event
+D, [2020-03-02T09:27:17.325294 #10990] DEBUG -- Pubnub::Event: Requested URI: https://ps.pndsn.com/v2/subscribe/sub-c-c1585dac-5333-11ea-80a4-42690e175160/battle_royale/0?pnsdk=PubNub-Ruby%2F4.2.3&t=%7B%22r%22%3A2%2C%22t%22%3A%2215831581854963527%22%7D&uuid=66e4b0b1-4e0b-46f3-8ab6-34d85c4b48fe

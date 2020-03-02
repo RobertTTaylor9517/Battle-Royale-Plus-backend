@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   post '/hit', to: 'single_player#hit'
   get '/attacks', to: 'attacks#index'
   post '/heal', to: 'single_player#health'
+  post '/save', to: 'saves#create'
+  post '/load', to: 'saves#show'
 end
