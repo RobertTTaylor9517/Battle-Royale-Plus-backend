@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   post '/heal', to: 'single_player#health'
   post '/save', to: 'saves#create'
   post '/load', to: 'saves#show'
+  post '/random', to: 'teams#random'
 end

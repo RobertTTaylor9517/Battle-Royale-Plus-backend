@@ -59,7 +59,7 @@ class SinglePlayerController < ApplicationController
         if(target.focus === attack.element)
             new_health = target.health - (attack.damage/2)
             if(new_health <= 0)
-                mess.push("#{target.name}")
+                mess.push("#{target.name} died")
                 target.destroy
             else
                 target.update(health: new_health)
@@ -68,6 +68,7 @@ class SinglePlayerController < ApplicationController
         else
             new_health = target.health - attack.damage
             if(new_health <= 0)
+                mess.push("#{target.name} died")
                 target.destroy
             else
                 target.update(health: new_health)

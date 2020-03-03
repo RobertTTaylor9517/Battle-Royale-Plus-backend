@@ -16,9 +16,10 @@ class SavesController < ApplicationController
         save = SaveState.find_by(id: params[:save_id])
 
         team = Team.find_by(id: save.team_id)
+        dungeon = Dungeon.all.first
 
         render json: {team: team.to_json(include: [characters: {
             include: [:attacks]
-        }]), floor_count: save.floor_count}
+        }]), floor_count: save.floor_count, dungeon: dungeon}
     end
 end

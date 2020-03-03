@@ -19,6 +19,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 gem 'jwt'
 gem 'simple_command'
 gem 'pubnub', '~> 4.2.3'
+gem 'faker'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

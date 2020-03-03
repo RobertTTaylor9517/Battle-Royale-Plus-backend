@@ -1,3 +1,4 @@
+require 'securerandom'
 class TeamsController < ApplicationController
     before_action :authenticate_request
 
@@ -32,6 +33,16 @@ class TeamsController < ApplicationController
         else
             render json: {error: "Team NOT Deleted"}
         end
+    end
+
+    def random
+        team = Team.find_by(id: params[:team_id])
+
+        team.generate_team()
+
+        render json: team.to_json(include: [characters: {
+            include: [:attacks]
+        }])
     end
 
 private

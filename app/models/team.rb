@@ -1,3 +1,4 @@
+require 'faker'
 class Team < ApplicationRecord
     NUM_OF_CHARACTERS = 4
     belongs_to :user
@@ -6,9 +7,23 @@ class Team < ApplicationRecord
     validates :team_name, presence: true
     validates :team_name, uniqueness: true
 
-    def message
-        byebug
-        return 'it worked'
+    def generate_team
+        focus = ['ice', 'water', 'fire', 'earth']
+        4.times do
+            char = Character.create(name: Faker::Name.first_name, focus: focus.sample, health: 100, team_id: self.id)
+
+            attacks = []
+            attacks.concat(Attack.where(element: char.focus))
+            attacks.concat(Attack.where(element: 'none'))
+            attacks.concat(Attack.where(element: 'medic'))
+
+            puts(attacks)
+
+            4.times do
+                CharacterAttack.create(character_id: char.id, attack_id: attacks.sample.id)
+            end
+
+        end
     end
 
 private
