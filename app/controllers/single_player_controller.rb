@@ -13,7 +13,7 @@ class SinglePlayerController < ApplicationController
         if enemy["weakness"] === attack["element"]
             enemy['health'] = enemy['health'] - (attack['damage'] * 2)
         else
-            enemy['health'] = enemy['health'] - (attack['damage'])
+            enemy['health'] = enemy['health'] - attack['damage']
         end
 
         if enemy['health'] > 0
