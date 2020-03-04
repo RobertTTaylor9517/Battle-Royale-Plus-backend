@@ -11,7 +11,7 @@ class AuthenticationController < ApplicationController
 
             render json: {token: command.result, user: user, saves: user.save_states, attacks: attacks}
         else
-            render json: {error: 'Invalid Login'}
+            render json: {error: command.errors.full_messages}
         end
     end
 end

@@ -8,7 +8,7 @@ class SavesController < ApplicationController
         if save.save!
             render json: save
         else
-            render json: {error: 'Did Not Save'}
+            render json: {error: save.errors.full_messages}
         end
     end
 
@@ -21,5 +21,15 @@ class SavesController < ApplicationController
         render json: {team: team.to_json(include: [characters: {
             include: [:attacks]
         }]), floor_count: save.floor_count, dungeon: dungeon}
+    end
+
+    def delete
+        save = SaveState.find_by(id: params[:save_id])
+
+        if save.destroy
+            render json: {success: 'Successfully Deleted'}
+        else
+            render json: {error: save.errors.full_messages}
+        end
     end
 end

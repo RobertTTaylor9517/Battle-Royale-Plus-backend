@@ -5,7 +5,7 @@ class Team < ApplicationRecord
     has_many :characters, dependent: :destroy
 
     validates :team_name, presence: true
-    validates :team_name, uniqueness: true
+    # validates :team_name, uniqueness: true
 
     def generate_team
         focus = ['ice', 'water', 'fire', 'earth']

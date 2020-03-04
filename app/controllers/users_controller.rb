@@ -21,7 +21,7 @@ class UsersController < ApplicationController
             render json: {token: token, user: user, saves: saves, attacks: attacks}
         else
             # add specific messages for validation errors
-            render json: {error: 'Did Not Save'}
+            render json: {error: user.errors.full_messages}
         end
     end
 

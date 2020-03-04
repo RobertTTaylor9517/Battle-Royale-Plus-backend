@@ -9,7 +9,7 @@ class TeamsController < ApplicationController
             render json: team.to_json(include: [:characters])
         else
             # add specific arror messages
-            render json: {error: "Did Not Save Team"}
+            render json: {error: team.errors.full_messages}
         end
     end
 

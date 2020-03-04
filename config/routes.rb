@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   post '/save', to: 'saves#create'
   post '/load', to: 'saves#show'
   post '/random', to: 'teams#random'
+  post '/save_delete', to: 'saves#delete'
 end
