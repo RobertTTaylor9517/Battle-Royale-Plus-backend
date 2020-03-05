@@ -18,7 +18,7 @@ class UsersController < ApplicationController
                 saves = user.save_states
             end
 
-            render json: {token: token, user: user, saves: saves, attacks: attacks}
+            render json: {token: token, user: user.to_json(except: [:password_digest]), saves: saves, attacks: attacks}
         else
             # add specific messages for validation errors
             render json: {error: user.errors.full_messages}

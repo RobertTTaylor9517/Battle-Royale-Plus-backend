@@ -6,6 +6,9 @@ class SinglePlayerController < ApplicationController
         enemy = params[:enemy]
         attack = params[:attack]
         floor_enemy_id = params[:floor_enemy_id]
+        char_name = params[:character]
+        mess=[]
+
 
 
         puts("Received: #{enemy}")
@@ -16,14 +19,17 @@ class SinglePlayerController < ApplicationController
             enemy['health'] = enemy['health'] - attack['damage']
         end
 
+        mess.push("#{char_name} uses #{attack['name']} on #{enemy['name']}")
+
         if enemy['health'] > 0
-            render json: enemy
+            render json: {enemy: enemy, message: mess}
         else
             floor_enemy = FloorEnemy.find_by(id: floor_enemy_id)
             if(floor_enemy != nil)
                 floor_enemy.destroy
+                mess.push("#{enemy['name'] } died")
             end
-            render json: {death: 'Enemy Died', name: enemy['name']}
+            render json: {enemy: 'death', name: enemy['name'], message: mess}
         end
 
 
@@ -76,6 +82,8 @@ class SinglePlayerController < ApplicationController
         end
 
         team = Team.find_by(id: params[:team_id])
+
+        # new_team = team.sort_by{|t| t.id}
 
         # byebug
 

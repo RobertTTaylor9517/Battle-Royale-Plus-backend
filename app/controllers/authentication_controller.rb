@@ -9,7 +9,7 @@ class AuthenticationController < ApplicationController
             user = User.find_by(id: temp['user_id'])
             attacks = Attack.all 
 
-            render json: {token: command.result, user: user, saves: user.save_states, attacks: attacks}
+            render json: {token: command.result, user: user.to_json(except: [:password_digest]), saves: user.save_states, attacks: attacks}
         else
             render json: {error: command.errors.full_messages}
         end
