@@ -1,24 +1,12 @@
-# README
+# Battle Royale Plus Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend for Web Browser game with Turn-based battle system
+hosted at https://battle-royale-plus.herokuapp.com/
+Press the question mark bubble in the bottom-right (upper right on mobile)
+for instructions.
+* Ruby Version: 2.6.1
+* Rails: 6.0
+* Postgres for database
+* Uses JWT for security
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Front-end GitHub: https://github.com/RobertTTaylor9517/Battle-Royale-Plus-frontend
